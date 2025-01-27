@@ -1,26 +1,47 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>3D Model Dispaly</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="3D Model Dispaly template" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="icon"
+      href="https://skaitech.al/wp-content/uploads/2024/03/icons8-source-code-100.png"
+      type="image/png" />
+  </head>
+  <style>
+    html {
+      height: 100%;
+    }
 
-<head>
-  <title>3D Model Dispaly</title>
-  <meta charset="utf-8">
-  <meta name="description" content="3D Model Dispaly template">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link type="text/css" href="./styles.css" rel="stylesheet" />
-  <link rel="icon" href="https://skaitech.al/wp-content/uploads/2024/03/icons8-source-code-100.png" type="image/png" />
-</head>
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, #000000 0%, #1f222e 50%);
+    }
 
-<body>
-  <!-- <model-viewer> HTML element -->
-  <model-viewer src="Horse.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls tone-mapping="neutral"
-    poster="poster.webp" shadow-intensity="1" autoplay>
-    <div class="progress-bar hide" slot="progress-bar">
-      <div class="update-bar"></div>
-    </div>
-  </model-viewer>
-  <script src="script.js"></script>
-  <!-- Loads <model-viewer> for browsers: -->
-  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
-</body>
-
+    model-viewer {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+  <body>
+    <!-- <model-viewer> HTML element -->
+    <model-viewer
+      src="Horse.glb"
+      ar-modes="scene-viewer webxr quick-look"
+      camera-controls
+      tone-mapping="neutral"
+      poster="poster.webp"
+      shadow-intensity="1"
+      autoplay>
+    </model-viewer>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+  </body>
 </html>
